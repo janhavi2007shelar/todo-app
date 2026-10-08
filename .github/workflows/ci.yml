@@ -1,0 +1,26 @@
+name: To-Do App CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: echo "Building To-Do App"
+
+      - name: Test
+        run: echo "Testing To-Do App"
+
+      - name: Deploy
+        run: echo "Deploying To-Do App"
